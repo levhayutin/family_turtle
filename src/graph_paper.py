@@ -8,6 +8,14 @@ import sys
 from math import remainder
 
 def pos_top_left(turtle):
+    """
+    Position the turtle in the upper most left corner
+
+    Parameters
+    ----------
+    turtle : type turtle
+        The instance of turtle 
+    """
     t = turtle
     # turtle diagram
     # -1000, 500 is top left
@@ -18,12 +26,33 @@ def pos_top_left(turtle):
     t.sety(500)
 
 def pos_center(turtle):
+    """
+    Position the turtle in the center at 0, 0
+
+    Parameters
+    ----------
+    turtle : type turtle
+        The instance of turtle 
+    """
     t = turtle
     t.penup()
     t.setx(0)
     t.sety(0)
 
 def draw_horizontal(turtle, direction, iterations, graph_width):
+    """
+    Draw a horizontal line across the full page -1000 to 1000 pixels
+
+    Parameters
+    ----------
+    turtle : type turtle
+    direction: str
+        ['up', 'down']
+    iterations: int
+        The number of lines to draw
+    graph_width: int
+        Number of pixes between each line
+    """
     t = turtle
     if direction == "up":
         direction = 1
@@ -41,6 +70,19 @@ def draw_horizontal(turtle, direction, iterations, graph_width):
             t.setx(-1000)
 
 def draw_vertical(turtle, direction, iterations, graph_width):
+    """
+    Draw a vertical line across the full page
+
+    Parameters
+    ----------
+    turtle : type turtle
+    direction: str
+        ['up', 'down']
+    iterations: int
+        The number of lines to draw
+    graph_width: int
+        Number of pixes between each line
+    """
     t = turtle
     if direction == "right":
         direction = 1
@@ -58,6 +100,19 @@ def draw_vertical(turtle, direction, iterations, graph_width):
         t.sety(-500)
 
 def draw_x(turtle, iterations, graph_width, graph_color):
+    """
+    Draw the x line
+
+    Parameters
+    ----------
+    turtle : type turtle
+    iterations: int
+        The number of lines to draw
+    graph_width: int
+        Number of pixes between each line
+    graph_color: string
+        ["green", "blue", or "#D3D3D3"]
+    """
     t = turtle
     # draw graph x
     pos_center(t)
@@ -77,6 +132,19 @@ def draw_x(turtle, iterations, graph_width, graph_color):
     t.pu()
 
 def draw_y(turtle, iterations, graph_width, graph_color):
+    """
+    Draw the y line
+
+    Parameters
+    ----------
+    turtle : type turtle
+    iterations: int
+        The number of lines to draw
+    graph_width: int
+        Number of pixes between each line
+    graph_color: string
+        ["green", "blue", or "#D3D3D3"]
+    """
     t = turtle
     pos_center(t)
     t.pencolor("black")
@@ -93,17 +161,13 @@ def draw_y(turtle, iterations, graph_width, graph_color):
     draw_vertical(t, "left", iterations, graph_width)
     t.pu()
 
-# graph_color = "#D3D3D3" # grey
-# # 500 pixes / 50 = 10
-# iterations = 10 # for 1/2 page
-# graph_width = 50
-
 @click.command()
 @click.option('-i', '--iterations', default=10)
 @click.option('-w', '--width', default=50)
 @click.option('-c', '--color', default="#D3D3D3")
 @click.option('-p', '--print_graph', default=False)
-def main(iterations, width, color, print_graph):
+@click.option('-s', '--signature', default="Bosas Solutions")
+def main(iterations, width, color, print_graph, signature):
 
     if remainder((1000/2),width) != 0:
         print("Sorry the width will not work with 1000 pixels, exiting")
@@ -130,7 +194,7 @@ def main(iterations, width, color, print_graph):
     # sign :)
     t.setpos(300,-470)
     t.color("red")
-    t.write("Bosas Solutions")
+    t.write(signature)
     turtle.update()
 
     if print_graph:
