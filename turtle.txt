@@ -1,0 +1,238 @@
+[whayutin@thinkdoe ~]$ source /var/tmp/lev/bin/activate
+(lev) [whayutin@thinkdoe ~]$ python
+Python 3.10.7 (main, Sep  7 2022, 00:00:00) [GCC 12.2.1 20220819 (Red Hat 12.2.1-1)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> turtle
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'turtle' is not defined. Did you mean: 'tuple'?
+>>> import turtle
+>>> s = turtle.getscreen()
+>>> c = turtle.getscreen()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<string>", line 5, in getscreen
+turtle.Terminator
+>>> s = turtle.getscreen()
+>>> c = turtle.getscreen()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<string>", line 5, in getscreen
+turtle.Terminator
+>>> 
+>>> 
+>>> c = turtle.getscreen()
+>>> c.bgcolor("yellow")
+>>> c.up()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: '_Screen' object has no attribute 'up'
+>>> c.left(90)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: '_Screen' object has no attribute 'left'
+>>> c.left(90)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: '_Screen' object has no attribute 'left'
+>>> dir(c)
+['_RUNNING', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_bgcolor', '_bgpic', '_bgpicname', '_bgpics', '_blankimage', '_canvas', '_color', '_colormode', '_colorstr', '_createimage', '_createline', '_createpoly', '_delay', '_delayvalue', '_delete', '_destroy', '_drawimage', '_drawline', '_drawpoly', '_image', '_incrementudc', '_iscolorstring', '_keys', '_listen', '_mode', '_onclick', '_ondrag', '_onkeypress', '_onkeyrelease', '_onrelease', '_onscreenclick', '_ontimer', '_pointlist', '_rescale', '_resize', '_root', '_setbgpic', '_setscrollregion', '_shapes', '_title', '_tracing', '_turtles', '_type', '_update', '_updatecounter', '_window_size', '_write', 'addshape', 'bgcolor', 'bgpic', 'bye', 'canvheight', 'canvwidth', 'clear', 'clearscreen', 'colormode', 'cv', 'delay', 'exitonclick', 'getcanvas', 'getshapes', 'listen', 'mainloop', 'mode', 'numinput', 'onclick', 'onkey', 'onkeypress', 'onkeyrelease', 'onscreenclick', 'ontimer', 'register_shape', 'reset', 'resetscreen', 'screensize', 'setup', 'setworldcoordinates', 'textinput', 'title', 'tracer', 'turtles', 'update', 'window_height', 'window_width', 'xscale', 'yscale']
+>>> c.textinput("foo")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: TurtleScreenBase.textinput() missing 1 required positional argument: 'prompt'
+>>> Exception in Tkinter callback
+Traceback (most recent call last):
+  File "/usr/lib64/python3.10/tkinter/__init__.py", line 1919, in __call__
+    if self.subst:
+KeyboardInterrupt
+
+>>> s = turtle.getscreen()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<string>", line 5, in getscreen
+turtle.Terminator
+>>> s = turtle.getscreen()
+>>> s.setbgcolor("yellow)
+  File "<stdin>", line 1
+    s.setbgcolor("yellow)
+                 ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>> s.setbgcolor("yellow")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: '_Screen' object has no attribute 'setbgcolor'. Did you mean: '_bgcolor'?
+>>> s.setbgcolor("yellow")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: '_Screen' object has no attribute 'setbgcolor'. Did you mean: '_bgcolor'?
+>>> s.bgcolor("yellow")
+>>> 
+>>> 
+>>> c = turtle.Turtle()
+>>> c.penup()
+>>> c.left(90)
+>>> c.left(90)
+>>> c.right(90)
+>>> c.right(180)
+>>> c.xcor(50)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: TNavigator.xcor() takes 1 positional argument but 2 were given
+>>> c.xcor()
+0.0
+>>> c.setx(50)
+>>> c.setx(5)
+>>> c.setx(-50)
+>>> c.sety(-100)
+>>> c.sety(-100)
+>>> c.sety(-100)
+>>> c.right(180)
+>>> c.left(90_
+  File "<stdin>", line 1
+    c.left(90_
+             ^
+SyntaxError: invalid decimal literal
+>>> c.left(90)
+>>> c.forward(500)
+>>> c.right(90)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.right(90)
+>>> c.left(90)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.left(180)
+>>> c.pd()
+>>> c.forward(250)
+>>> c.forward(250)
+>>> c.right(90)
+>>> c.left(180)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.left(90)
+>>> c.forward(50)
+>>> c.left(90)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.right(90)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.right(90)
+>>> c.left(90)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.left(90)
+>>> c.forward(10)
+>>> c.forward(10)
+>>> c.forward(10)
+>>> c.forward(10)
+>>> c.forward(10)
+>>> c.pu()
+>>> c.color('blue')
+>>> c.shape('arrow')
+>>> c.pu()
+>>> c.right(180)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.right(180)
+>>> c.left(180)
+>>> c.forward(50)
+>>> c.left(90)
+>>> c.left(90)
+>>> c.left(90)
+>>> c.left(90)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.begin fill(.)_
+  File "<stdin>", line 1
+    c.begin fill(.)_
+            ^^^^
+SyntaxError: invalid syntax
+>>> c.begin fill()
+  File "<stdin>", line 1
+    c.begin fill()
+            ^^^^
+SyntaxError: invalid syntax
+>>> c.begin fill()
+  File "<stdin>", line 1
+    c.begin fill()
+            ^^^^
+SyntaxError: invalid syntax
+>>> c.begin_fill()
+>>> c.left(90)
+>>> c.right(90)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> 
+[1]+  Stopped                 python
+(lev) [whayutin@thinkdoe ~]$ fg
+python
+
+
+>>> 
+>>> c.back(100)
+>>> c.pd()
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> 
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.('ccccccdlvuefebfgutjcgevibbvlibkcvjculgerclii
+  File "<stdin>", line 1
+    c.('ccccccdlvuefebfgutjcgevibbvlibkcvjculgerclii
+      ^
+SyntaxError: invalid syntax
+>>> yellow')
+  File "<stdin>", line 1
+    yellow')
+          ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>> c.color('yellow')
+>>> c.back(100)
+>>> c.color('blue')
+>>> c.right(90)
+>>> c.fd(10)
+>>> c.fd(10)
+>>> c.fd(10)
+>>> c.fd(10)
+>>> c.right(90)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.forward(50)
+>>> 
+>>> c.forward(50)
+>>> c.forward(50)
+>>> c.right(90)
+>>> c.fd(10)
+>>> c.fd(10)
+>>> c.fd(10)
+>>> c.end_fill()
+>>> c.right(180)
+>>> c.begin fill()
+  File "<stdin>", line 1
+    c.begin fill()
+            ^^^^
+SyntaxError: invalid syntax
+>>> c.begin_fill()
+>>> 
+
