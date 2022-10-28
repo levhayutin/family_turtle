@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
+import click
 import turtle
 import subprocess
-import click
+import sys
 
 from math import remainder
 
@@ -101,15 +102,19 @@ def draw_y(turtle, iterations, graph_width, graph_color):
 @click.option('-i', '--iterations', default=10)
 @click.option('-w', '--width', default=50)
 @click.option('-c', '--color', default="#D3D3D3")
-@click.option('-p', '--print', default=False)
-def main(iterations, width, color, print):
+@click.option('-p', '--print_graph', default=False)
+def main(iterations, width, color, print_graph):
 
     if remainder((1000/2),width) != 0:
-        print("Sorry the width will not work w/ 1000 pixels")
+        print("Sorry the width will not work with 1000 pixels, exiting")
+        sys.exit()
+
     if width == 25:
         iterations=20
     elif width == 10:
         iterations=40
+    elif width < 10 or width > 50:
+        print_graph = False # don't waste paper :)
    
     sc = turtle.Screen()
     sc.bgcolor="white"
@@ -128,7 +133,7 @@ def main(iterations, width, color, print):
     t.write("Bosas Solutions")
     turtle.update()
 
-    if print:
+    if print_graph:
         cv = turtle.getcanvas()
         cv.postscript(file="/tmp/graph.ps", colormode='color')
         subprocess.call(['lpr', '-o', 'orientation-requested=landscape', '/tmp/graph.ps'])
