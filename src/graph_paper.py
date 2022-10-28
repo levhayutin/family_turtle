@@ -4,7 +4,7 @@ import turtle
 import subprocess
 import click
 
-
+from math import remainder
 
 def pos_top_left(turtle):
     t = turtle
@@ -104,6 +104,12 @@ def draw_y(turtle, iterations, graph_width, graph_color):
 @click.option('-p', '--print', default=False)
 def main(iterations, width, color, print):
 
+    if remainder((1000/2),width) != 0:
+        print("Sorry the width will not work w/ 1000 pixels")
+    if width == 25:
+        iterations=20
+    elif width == 10:
+        iterations=40
    
     sc = turtle.Screen()
     sc.bgcolor="white"
