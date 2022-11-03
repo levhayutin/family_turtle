@@ -163,7 +163,7 @@ def draw_y(turtle, iterations, graph_width, graph_color):
 
 @click.command()
 @click.option('-i', '--iterations', default=10)
-@click.option('-w', '--width', default=50)
+@click.option('-w', '--width', default=25)
 @click.option('-c', '--color', default="#D3D3D3")
 @click.option('-p', '--print_graph', default=False)
 @click.option('-s', '--signature', default="Bosas Solutions")
